@@ -1,3 +1,5 @@
 <div qv-extension style="height: 100%; position: relative; overflow: auto;" >
-	TagCloud
+	<ul class="tag_cloud">
+		<li ng-repeat="item in layout.qHyperCube.qDataPages[0].qMatrix" ng-style="">{{item[0].qText}}</li>
+	</ul>
 </div>

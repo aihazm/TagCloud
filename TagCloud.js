@@ -1,5 +1,6 @@
-define(["jquery", "text!./tagcloud.ng.html"], function($, template) {'use strict';
-
+define(["jquery", "./TagCloud.properties", "text!./tagcloud.ng.html", "text!./tagcloud.css"], function($, properties, template, css) {
+	'use strict';
+	$("<style>").html(css).appendTo("head");
 	return {
 		template : template,
 		initialProperties : {
@@ -13,33 +14,21 @@ define(["jquery", "text!./tagcloud.ng.html"], function($, template) {'use strict
 				}]
 			}
 		},
-		definition : {
-			type : "items",
-			component : "accordion",
-			items : {
-				dimensions : {
-					uses : "dimensions",
-					min : 1,
-					max : 1
-				},
-				measures : {
-					uses : "measures",
-					min : 1,
-					max : 1
-				},
-				sorting : {
-					uses : "sorting"
-				},
-				settings : {
-					uses : "settings"
-				}
-			}
-		},
+		definition : properties,
 		snapshot : {
 			canTakeSnapshot : true
 		},
 		controller : ['$scope', function($scope) {
-			
+			$scope.getFontsize = function(){
+				var max, min = null;
+				$scope.layout.qHyperCube.qDataPages[0].qMatrix.forEach(function(el){
+					max = Math.max(max, el[1].qNum);
+					min = Math.min(min, el[1].qNum);
+				});
+				console.log(max,min);
+				//Math.max(maxVal, measure.qNum);
+			};
+			$scope.getFontsize();
 		}]
 
 	};

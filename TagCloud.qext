@@ -1,0 +1,9 @@
+{
+	"name" : "TagCloud",
+	"description" : "Extension TagCloud",
+	"icon" : "",
+	"type" : "visualization",
+	"version": "0.1",
+	"preview" : "bar",
+	"author": ""
+}

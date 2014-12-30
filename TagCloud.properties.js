@@ -39,6 +39,42 @@ define( [], function () {
 								defaultValue: 24
 							}
 						}
+					},
+					effects: {
+						type: "items",
+						label: "Effects",
+						items: {
+							shadow: {
+								ref: "effects.shadow",
+								translation: "Shadow",
+								type: "boolean",
+								defaultValue: false
+							},
+							rotation: {
+								ref: "effects.rotation",
+								translation: "Rotation",
+								type: "boolean",
+								defaultValue: false
+							},
+							threed: {
+								ref: "effects.threed",
+								translation: "3D Effect",
+								type: "boolean",
+								defaultValue: false
+							},
+							glow: {
+								ref: "effects.glow",
+								translation: "Glow Effect",
+								type: "boolean",
+								defaultValue: false
+							},
+							stroke: {
+								ref: "effects.stroke",
+								translation: "Stroke Effect (only chrome)",
+								type: "boolean",
+								defaultValue: false
+							}
+						}
 					}
 				}
 			}

@@ -1,9 +1,9 @@
 {
 	"name" : "TagCloud",
 	"description" : "Extension TagCloud",
-	"icon" : "",
+	"icon" : "text-image",
 	"type" : "visualization",
 	"version": "0.1",
-	"preview" : "bar",
-	"author": ""
+	"preview" : "tagCloud.PNG",
+	"author": "QlikTech International"
 }

@@ -1,5 +1,8 @@
 <div qv-extension style="height: 100%; position: relative; overflow: auto;" >
 	<ul class="tag_cloud">
-		<li ng-repeat="item in layout.qHyperCube.qDataPages[0].qMatrix" ng-style="">{{item[0].qText}}</li>
+		<li ng-repeat="item in layout.qHyperCube.qDataPages[0].qMatrix"
+			ng-style="{'font-size':getFontsize(item[1].qNum),'color':randomColor()}"
+			ng-class="{shadow:layout.effects.shadow, rotation:layout.effects.rotation, threed:layout.effects.threed, glow:layout.effects.glow, stroke:layout.effects.stroke}"
+			qva-activate="sel($event)" data-value="{{ item[0].qElemNumber }}">{{item[0].qText}}</li>
 	</ul>
 </div>

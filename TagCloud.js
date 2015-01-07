@@ -32,8 +32,8 @@ define(["jquery", "./TagCloud.properties", "text!./tagcloud.ng.html", "text!./ta
 				if ( el[1].qNum < min ) { 
 					min = el[1].qNum;
 				}
-			});			
-			var fontSteps = 100/(maxFontSize - minFontSize);			
+			});
+			var fontSteps = 100/(maxFontSize - minFontSize);
 			$scope.getFontsize = function(val){				
 				val = Math.round((val*100/max)*100)/100;
 				val = minFontSize + ( Math.floor( val/ fontSteps ) );
